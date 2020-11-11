@@ -1,0 +1,105 @@
+<html>   
+    <head>
+        <body onload="document.focus();">
+        </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title> Login Page </title>  
+    <style>   
+    Body {  
+      font-family: Calibri, Helvetica, sans-serif;  
+    
+    }  
+    button {   
+           background-color: #4CAF50;   
+           width: 100%;  
+            color: rgb(0, 0, 0);   
+            padding: 15px;   
+            margin: 10px 0px;   
+            border: none;   
+            cursor: pointer;   
+             }   
+     form {   
+            border: 3px solid #f1f1f1;   
+        }   
+     input[type=text], input[type=password] {   
+            width: 100%;   
+            margin: 8px 0;  
+            padding: 12px 20px;   
+            display: inline-block;   
+            border: 2px solid green;   
+            box-sizing: border-box;   
+        }  
+     button:hover {   
+            opacity: 0.7;   
+        }   
+      .cancelbtn {   
+            width: auto;   
+            padding: 10px 18px;  
+            margin: 10px 5px;  
+        }   
+            
+         
+     .container {   
+            padding: 25px;   
+            background-color: lightblue;  
+        }   
+    </style>   
+    </head>    
+    <body>    
+        <center> <h1> Login Form </h1> </center>   
+        <form>  
+            <div class="container">      
+                <label for="email">Username:</label></li>
+                <input type="text" placeholder="Enter username"  size="50" name="email" required></li>  
+                <label for="passid">Password:</label></li>
+                <input type="password" placeholder="Enter password" size="12" name="passid" required></li>
+                <button type="submit">Login</button>     
+                <button type="button" class="cancelbtn"> Cancel</button>   
+            </div>   
+        </form>     
+        <script type="Text/JavaScript">
+        function formValidation()
+{
+    var uemail = document.email;
+    var passid = document..passid;
+    if(ValidateEmail(uemail))
+{
+    if(passid_validation(passid,7,12))
+{
+}
+} return false;
+}
+
+        function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+} 
+function passid_validation(passid)
+{
+var passid_len =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+if (passid.value.match(passid_len)) 
+{
+return true;
+}
+else
+{
+    alert("Password should contain small letter & capital letter & numbers / length be between 6 - 20")
+return false;
+}
+}
+
+return false;
+   
+        </script>
+    </body>     
+    </html>
